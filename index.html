@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW 개발자 정보 공유 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">SW Develop</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tutorials" class="nav-link">튜토리얼</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resources" class="nav-link">리소스</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#best-practices" class="nav-link">베스트 프랙티스</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">블로그</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <h2>소프트웨어 개발자들을 위한 정보 공유 플랫폼</h2>
+                <p>개발 지식, 경험, 팁을 공유하고 배우는 공간입니다.</p>
+                <button class="cta-button">시작하기</button>
+            </div>
+        </section>
+
+        <section id="tutorials" class="content-section">
+            <div class="container">
+                <h2>튜토리얼</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>입문자 가이드</h3>
+                        <p>프로그래밍 입문자를 위한 기초 튜토리얼 모음</p>
+                    </div>
+                    <div class="card">
+                        <h3>고급 기법</h3>
+                        <p>경험 있는 개발자를 위한 고급 팁과 기법</p>
+                    </div>
+                    <div class="card">
+                        <h3>프레임워크</h3>
+                        <p>인기 프레임워크 사용법과 실전 예제</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="content-section">
+            <div class="container">
+                <h2>리소스</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>코드 스니펫</h3>
+                        <p>재사용 가능한 유용한 코드 조각들</p>
+                    </div>
+                    <div class="card">
+                        <h3>도구 추천</h3>
+                        <p>개발 효율을 높여주는 유용한 도구들</p>
+                    </div>
+                    <div class="card">
+                        <h3>책 추천</h3>
+                        <p>필독 서적과 학습 자료</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices" class="content-section">
+            <div class="container">
+                <h2>베스트 프랙티스</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>코딩 스타일</h3>
+                        <p>깔끔하고 유지보수하기 쉬운 코드 작성법</p>
+                    </div>
+                    <div class="card">
+                        <h3>보안</h3>
+                        <p>애플리케이션 보안을 위한 권장 사항</p>
+                    </div>
+                    <div class="card">
+                        <h3>테스트</h3>
+                        <p>효과적인 테스트 전략과 방법론</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="content-section">
+            <div class="container">
+                <h2>블로그</h2>
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <h3>최신 개발 트렌드</h3>
+                        <p class="post-meta">2026년 3월 20일 by 홍길동</p>
+                        <p>현재 소프트웨어 개발 분야에서 주목받고 있는 최신 트렌드를 소개합니다...</p>
+                    </article>
+                    <article class="blog-post">
+                        <h3>오픈소스 프로젝트 참여하기</h3>
+                        <p class="post-meta">2026년 3월 15일 by 김철수</p>
+                        <p>오픈소스 커뮤니티에 기여하는 방법과 그 중요성에 대해 설명합니다...</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2>문의하기</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">이름:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">메시지:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">전송</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SW Develop. 모든 권리 보유.</p>
+            <p>문의: admin@sw-develop.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
