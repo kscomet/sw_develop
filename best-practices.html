@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베스트 프랙티스 - SW Develop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">SW Develop</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                    <li class="nav-item"><a href="tutorials.html" class="nav-link">튜토리얼</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">리소스</a></li>
+                    <li class="nav-item"><a href="best-practices.html" class="nav-link active">베스트 프랙티스</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">블로그</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h2>베스트 프랙티스 가이드</h2>
+                <p>유지보수하기 좋고 안정적인 시스템을 구축하기 위한 방법론입니다.</p>
+                
+                <div class="best-practices-categories">
+                    <button class="category-button active">전체</button>
+                    <button class="category-button">코딩 스타일</button>
+                    <button class="category-button">보안</button>
+                    <button class="category-button">테스트</button>
+                    <button class="category-button">배포</button>
+                </div>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>클린 코드 가이드</h3>
+                        <p>가독성이 높고 협업에 용이한 코드 작성 패턴과 네이밍 규칙</p>
+                        <pre class="code-example"><code>// 나쁜 예
+function calc(x, y, z) {
+  return x * y * z;
+}
+
+// 좋은 예
+function calculateVolume(length, width, height) {
+  return length * width * height;
+}</code></pre>
+                        <div class="practice-meta">
+                            <span class="category">코딩 스타일</span>
+                            <span class="difficulty">중급</span>
+                        </div>
+                        <button class="cta-button">읽어보기</button>
+                    </div>
+                    <div class="card">
+                        <h3>웹 보안 체크리스트</h3>
+                        <p>XSS, CSRF 방어 등 프론트엔드 및 백엔드 필수 보안 사항</p>
+                        <ul class="security-checks">
+                            <li>입력값 검증 및 sanitize</li>
+                            <li>CSRF 토큰 사용</li>
+                            <li>HTTPS 강제 적용</li>
+                        </ul>
+                        <div class="practice-meta">
+                            <span class="category">보안</span>
+                            <span class="difficulty">고급</span>
+                        </div>
+                        <button class="cta-button">읽어보기</button>
+                    </div>
+                    <div class="card">
+                        <h3>TDD와 테스트 자동화</h3>
+                        <p>Jest와 Cypress를 활용한 단위 테스트 및 E2E 테스트 전략</p>
+                        <pre class="code-example"><code>// Jest 단위 테스트 예시
+describe('calculateTotalPrice', () => {
+  it('should calculate total price correctly', () => {
+    const items = [{price: 10}, {price: 20}];
+    expect(calculateTotalPrice(items)).toBe(30);
+  });
+});</code></pre>
+                        <div class="practice-meta">
+                            <span class="category">테스트</span>
+                            <span class="difficulty">중급</span>
+                        </div>
+                        <button class="cta-button">읽어보기</button>
+                    </div>
+                </div>
+                
+                <div class="case-studies">
+                    <h3>실무 적용 사례</h3>
+                    <div class="case-study">
+                        <h4>OO기업의 클린 코드 적용 사례</h4>
+                        <p>OO기업은 클린 코드 원칙을 적용하여 코드 리뷰 시간을 40% 단축시켰습니다.</p>
+                        <a href="#" class="read-more">자세히 보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SW Develop. 모든 권리 보유.</p>
+            <p>문의: admin@sw-develop.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

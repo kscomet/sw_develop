@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 - SW Develop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="nav-logo">SW Develop</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                    <li class="nav-item"><a href="tutorials.html" class="nav-link">튜토리얼</a></li>
+                    <li class="nav-item"><a href="resources.html" class="nav-link">리소스</a></li>
+                    <li class="nav-item"><a href="best-practices.html" class="nav-link">베스트 프랙티스</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link active">블로그</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <h2>개발자 블로그</h2>
+                
+                <div class="blog-search">
+                    <input type="text" placeholder="블로그 검색..." class="search-input">
+                    <button class="search-button">검색</button>
+                </div>
+                
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <h3>2026년 프론트엔드 생태계 동향</h3>
+                        <p class="post-meta">2026년 3월 23일 by 프론트장인</p>
+                        <p>올해 프론트엔드 개발에서 주목해야 할 주요 기술과 프레임워크의 변화를 심도 있게 분석해 보았습니다. 웹어셈블리와 새로운 렌더링 패턴들이 어떻게 우리의 개발 환경을 변화시키고 있는지 살펴보겠습니다.</p>
+                        
+                        <h4>웹어셈블리의 영향</h4>
+                        <p>웹어셈블리는 이제 단순한 실험적인 기술이 아닌, 실제 프로덕션 환경에서 사용되는 핵심 기술로 자리 잡았습니다. 특히 C/C++로 작성된 라이브러리를 웹에서 직접 실행할 수 있다는 점은 큰 장점입니다.</p>
+                        
+                        <h4>새로운 렌더링 패턴</h4>
+                        <p>React Server Components와 같은 새로운 렌더링 패턴은 클라이언트와 서버 간의 경계를 재정의하고 있습니다. 이러한 변화는 애플리케이션의 성능과 사용자 경험을 획기적으로 개선할 수 있습니다.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">프론트엔드</span>
+                            <span class="tag">웹어셈블리</span>
+                            <span class="tag">React</span>
+                        </div>
+                        
+                        <a href="#" class="read-more" style="color: #007bff; text-decoration: none;">자세히 읽기 &rarr;</a>
+                    </article>
+                    
+                    <article class="blog-post">
+                        <h3>오픈소스 프로젝트 참여하기</h3>
+                        <p class="post-meta">2026년 3월 15일 by 김철수</p>
+                        <p>오픈소스 커뮤니티에 기여하는 방법과 그 중요성에 대해 설명합니다. 첫 PR을 날리는 방법부터 메인테이너와 소통하는 팁까지...</p>
+                        
+                        <h4>시작 방법</h4>
+                        <p>처음 오픈소스에 기여하는 것을 두려워할 필요는 없습니다. 작은 기여라도 큰 가치를 가질 수 있습니다. 문서 개선이나 번역부터 시작해보세요.</p>
+                        
+                        <h4>기여의 가치</h4>
+                        <p>오픈소스 기여는 단순히 코드를 공헌하는 것을 넘어, 전 세계 개발자들과 협업하고 피드백을 받는 귀중한 경험을 제공합니다.</p>
+                        
+                        <div class="tags">
+                            <span class="tag">오픈소스</span>
+                            <span class="tag">커뮤니티</span>
+                            <span class="tag">협업</span>
+                        </div>
+                        
+                        <a href="#" class="read-more" style="color: #007bff; text-decoration: none;">자세히 읽기 &rarr;</a>
+                    </article>
+                </div>
+                
+                <div class="comments-section">
+                    <h3>댓글</h3>
+                    <div class="comment">
+                        <p class="comment-author">이영희</p>
+                        <p class="comment-content">프론트엔드 동향 포스트가 정말 유익하네요. 특히 웹어셈블리 부분은 흥미롭습니다.</p>
+                        <p class="comment-date">2026년 3월 24일</p>
+                    </div>
+                    <div class="comment">
+                        <p class="comment-author">박지민</p>
+                        <p class="comment-content">오픈소스 기여에 대한 조언 감사합니다. 처음 PR을 올릴 때 항상 불안했는데, 이 글을 통해 자신감을 얻었어요.</p>
+                        <p class="comment-date">2026년 3월 20일</p>
+                    </div>
+                    <div class="comment-form">
+                        <h4>댓글 남기기</h4>
+                        <textarea placeholder="댓글을 입력하세요..." rows="4"></textarea>
+                        <button class="cta-button">댓글 등록</button>
+                    </div>
+                </div>
+                
+                <div class="related-posts">
+                    <h3>관련 포스트</h3>
+                    <ul>
+                        <li><a href="#">웹 성능 최적화 기법</a></li>
+                        <li><a href="#">2026년 백엔드 기술 트렌드</a></li>
+                        <li><a href="#">개발자의 생산성을 높이는 도구들</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 SW Develop. 모든 권리 보유.</p>
+            <p>문의: admin@sw-develop.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

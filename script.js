@@ -103,3 +103,102 @@ scrollToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// 튜토리얼 진행률 표시 기능
+function updateTutorialProgress() {
+    const progressFill = document.querySelector('.progress-fill');
+    if (progressFill) {
+        // 실제 구현에서는 사용자의 진행 상황을 추적하여 업데이트
+        // 여기서는 데모용으로 60%로 설정
+        progressFill.style.width = '60%';
+    }
+}
+
+// 리소스 필터링 기능
+function setupResourceFiltering() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const resourceItems = document.querySelectorAll('.resource-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 활성 버튼 표시
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            // 리소스 아이템 필터링
+            resourceItems.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// 베스트 프랙티스 카테고리 필터링 기능
+function setupBestPracticesFiltering() {
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const practiceItems = document.querySelectorAll('.practice-item');
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 활성 버튼 표시
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const categoryValue = button.getAttribute('data-category');
+            
+            // 베스트 프랙티스 아이템 필터링
+            practiceItems.forEach(item => {
+                if (categoryValue === 'all' || item.classList.contains(categoryValue)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// 블로그 검색 기능
+function setupBlogSearch() {
+    const searchInput = document.querySelector('.search-input');
+    const searchButton = document.querySelector('.search-button');
+    const blogPosts = document.querySelectorAll('.blog-post');
+    
+    if (searchInput && searchButton) {
+        const performSearch = () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            blogPosts.forEach(post => {
+                const title = post.querySelector('h3').textContent.toLowerCase();
+                const content = post.textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        };
+        
+        searchButton.addEventListener('click', performSearch);
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    }
+}
+
+// 페이지 로드 시 초기화
+document.addEventListener('DOMContentLoaded', () => {
+    updateTutorialProgress();
+    setupResourceFiltering();
+    setupBestPracticesFiltering();
+    setupBlogSearch();
+});
